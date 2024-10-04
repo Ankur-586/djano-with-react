@@ -1,0 +1,32 @@
+https://www.youtube.com/watch?v=c-QsfbznSXI&t=2s
+
+React: 
+step1:
+npm create vite@latest frontend -- --template react
+npm install axios react-router-dom jwt-decode
+
+step2:
+1. under src: Delete css files - App.css & index.css
+2. under scr: in App.jsx delete everthing and keep only 
+                import react from "react"
+                function App() {
+                    return (
+                        <>
+                        </>
+                      )
+                    }
+                export default App
+3. Under scr: in main.jsx remove this import: import './index.css'
+4. Under scr: Now we will create few dirs under src: pages, styles, components
+3. Under scr: Now we will create to js files under src: constants.js , api.js
+
+step 3:
+now we will create a .env file under frontend dir.
+
+Code write:
+1. We start from contants.js
+
+2. to navigate we write code inside App.jsx
+
+Backend:
+the refersh token is used inside src/components/
