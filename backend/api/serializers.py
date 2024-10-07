@@ -8,13 +8,15 @@ class UserSerializers(serializers.ModelSerializer):
         fields = ['id','username','password']
         extra_kwargs = {'password': {'write_only': True}}
         
-    # def create(self, validated_data):
-    #     print('validated_data',validated_data)
-    #     user = User.objects.create_user(**validated_data)
-    #     return user
+    def create(self, validated_data):
+        print('validated_data & this is coming from serializers',validated_data)
+        user = User.objects.create_user(**validated_data)
+        return user
     
 class NoteSerilaizer(serializers.ModelSerializer):
     class Meta:
         model = Note
         fields = ['id','title','description','created_at','author']
         extra_kwargs = {'author': {'read_only':True}}
+        
+# {'username': 'user_new', 'password': 'qwerty'}
